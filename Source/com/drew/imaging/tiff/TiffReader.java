@@ -201,7 +201,7 @@ public class TiffReader
                     stackInfo.dirTagCount = dirTagCount;
                     stackInfo.tiffHeaderOffset = tiffHeaderOffset;
                     stackInfo.invalidTiffFormatCodeCount = invalidTiffFormatCodeCount;
-                    stack.push(new StackInfo(subDirOffset, tiffHeaderOffset, 1, tagNumber, dirTagCount, invalidTiffFormatCodeCount));
+                    stack.push(new StackInfo(subDirOffset, tiffHeaderOffset, -1, tagNumber, dirTagCount, invalidTiffFormatCodeCount));
                     return;
                 } else {
                     if (!handler.customProcessTag(tagValueOffset, processedIfdOffsets, tiffHeaderOffset, reader, tagId, byteCount)) {
